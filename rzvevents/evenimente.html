@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>Evenimente — RZVevents</title>
+  <meta name="description" content="RZVevents susține festivaluri, corporate și petreceri în Cluj & împrejurimi cu mobilier premium. Montaj și transport gratuit în zonă.">
+  <link rel="canonical" href="https://rzvevents.ro/evenimente.html">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RZVevents">
+  <meta property="og:title" content="Evenimente — RZVevents">
+  <meta property="og:description" content="Mobilier premium pentru festivaluri, corporate și petreceri. Montaj & transport gratuit în Cluj.">
+  <meta property="og:url" content="https://rzvevents.ro/evenimente.html">
+  <meta property="og:image" content="images/og-cover.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Evenimente — RZVevents">
+  <meta name="twitter:description" content="Mobilier premium pentru festivaluri, corporate și petreceri. Montaj & transport gratuit în Cluj.">
+  <meta name="twitter:image" content="images/og-cover.jpg">
+
+  <!-- Fonturi -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#0b0f1a; --bg2:#0f172a;
+      --ink:#e7eefb; --muted:#9aa6c5;
+      --btn:#d4af37; --btnHover:#c39a2f;
+      --ring:rgba(255,255,255,.12);
+      --card:rgba(255,255,255,.05);
+      --space:clamp(20px,5vw,48px);
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink); line-height:1.6;
+      background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%);
+    }
+
+    /* HEADER + NAV (hamburger) */
+    .site-header{
+      position:sticky; top:0; z-index:50; backdrop-filter:blur(8px);
+      background:linear-gradient(180deg,rgba(11,15,26,.9),rgba(15,23,42,.7));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .site-header__inner{
+      max-width:1100px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{ font-family:"Rubik Wet Paint", cursive; color:#ecf2ff; text-decoration:none; font-size:26px; }
+
+    .nav{ display:flex; gap:16px; }
+    .nav a{ color:#e7eefb; text-decoration:none; font-weight:700; padding:8px 10px; border-radius:10px; }
+    .nav a:hover{ background:rgba(255,255,255,.06); }
+
+    .nav-toggle{
+      display:none; background:transparent; border:1px solid var(--ring);
+      color:#e7eefb; padding:8px 10px; border-radius:10px; cursor:pointer;
+      align-items:center; gap:8px;
+    }
+    .nav-toggle .bars{
+      width:18px; height:2px; background:#e7eefb; position:relative; display:block;
+    }
+    .nav-toggle .bars::before, .nav-toggle .bars::after{
+      content:""; position:absolute; left:0; right:0; height:2px; background:#e7eefb;
+    }
+    .nav-toggle .bars::before{ top:-6px } .nav-toggle .bars::after{ top:6px }
+
+    @media (max-width:820px){
+      .nav{ display:none; position:absolute; top:100%; left:0; right:0;
+            background:linear-gradient(180deg,rgba(11,15,26,.98),rgba(15,23,42,.95));
+            border-bottom:1px solid rgba(255,255,255,.06);
+            padding:10px 16px; flex-direction:column; gap:8px; }
+      .nav.open{ display:flex; }
+      .nav a{ padding:10px 12px }
+      .nav-toggle{ display:inline-flex; }
+    }
+
+    /* PAGE */
+    .wrap{max-width:980px;margin:0 auto;padding:var(--space) 16px}
+    .center{text-align:center}
+    .muted{color:var(--muted)}
+    .section{margin:var(--space) 0}
+
+    h1{
+      font-family:"Rubik Wet Paint", cursive;
+      font-size:clamp(42px,9vw,96px);
+      margin:0 0 10px; text-align:center;
+      color:#ecf2ff; text-shadow:0 3px 0 #111827,0 6px 18px #000,0 0 36px #60a5fa55,0 0 80px #3b82f655;
+    }
+    h2{margin:0 0 10px; font-size:24px; color:var(--btn); text-align:center}
+    .lead{max-width:820px;margin:0 auto}
+
+    .card{ background:var(--card); border:1px solid var(--ring); border-radius:18px; padding:24px; }
+
+    /* Highlight */
+    .case{display:grid; gap:18px; grid-template-columns:1fr; align-items:center}
+    .hero{
+      aspect-ratio:16/9; width:100%; border-radius:16px; border:1px solid var(--ring);
+      object-fit:cover; display:block; background:#111;
+    }
+
+    /* 3 categorii */
+    .grid{display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .cat h3{margin:0 0 6px; font-size:18px; color:#fff}
+    .cat p{margin:0; color:var(--muted)}
+
+    .btn{
+      display:inline-block; text-decoration:none; font-weight:800; color:#111;
+      background:var(--btn); border:1px solid rgba(0,0,0,.08); border-radius:18px;
+      padding:14px 26px; transition:.2s;
+    }
+    .btn:hover{background:var(--btnHover); transform:translateY(-2px); box-shadow:0 10px 24px rgba(0,0,0,.45)}
+    .cta{margin-top:12px; text-align:center}
+
+    .back{display:block;text-align:center;margin-top:var(--space);color:var(--muted);text-decoration:none}
+    .back:hover{color:var(--ink);text-decoration:underline}
+
+    /* FOOTER */
+    footer{ border-top:1px solid rgba(255,255,255,.06); padding:18px 16px; text-align:center; color:var(--muted); }
+
+    /* WhatsApp FAB cu text */
+    .wa-fab{
+      position:fixed; right:18px; bottom:18px; z-index:60;
+      background:var(--btn); color:#111; border:1px solid rgba(0,0,0,.08);
+      border-radius:999px; padding:12px 18px; font-weight:800; text-decoration:none;
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+    .wa-fab:hover{ background:var(--btnHover); transform:translateY(-1px); }
+
+    /* mici efecte (respectă reduce motion) */
+    @media (prefers-reduced-motion:no-preference){
+      .card, .hero, .btn { transition:transform .2s ease, box-shadow .2s ease, background .2s ease; }
+      .card:hover{ transform:translateY(-2px); box-shadow:0 12px 30px rgba(0,0,0,.28); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand">RZVevents</a>
+
+      <button class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Deschide meniul">
+        <span class="bars" aria-hidden="true"></span> Meniu
+      </button>
+
+      <nav id="site-nav" class="nav" role="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="evenimente.html" aria-current="page">Evenimente</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="wrap">
+
+    <!-- HERO scurt -->
+    <section class="section center" style="margin-top:0">
+      <h1>Evenimente</h1>
+      <p class="lead muted">Suntem alături de organizatori din Cluj și împrejurimi pentru <b>festivaluri</b>, <b>evenimente corporate</b> și <b>petreceri</b>. Mobilier premium, montaj & transport gratuit în zona Cluj.</p>
+    </section>
+
+    <!-- UN SINGUR HIGHLIGHT -->
+    <section class="section">
+      <h2>Untold — Cluj-Napoca</h2>
+      <div class="case">
+        <img class="hero" src="images/Untold_Vip.jpg" alt="Zona lounge VIP mobilată de RZVevents la Untold, Cluj-Napoca"
+             loading="lazy" decoding="async" fetchpriority="low">
+        <div class="card">
+          <p class="muted" style="margin:0">
+            Am contribuit la zonele de relaxare cu canapele, mese și scaune rezistente, păstrând un aspect premium pe durata festivalului.
+            Setup rapid, întreținere atentă, feedback excelent din partea organizatorilor.
+          </p>
+          <div class="cta"><a class="btn" href="products.html">Vezi produsele</a></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3 TIPURI (carduri aerisite) -->
+    <section class="section">
+      <h2>Unde strălucim</h2>
+      <div class="grid">
+        <div class="card cat">
+          <h3>Festivaluri & Concerte</h3>
+          <p>Lounge & VIP cu look curat și rezistență pentru trafic mare.</p>
+        </div>
+        <div class="card cat">
+          <h3>Corporate & Conferințe</h3>
+          <p>Setup modular, scaune comode, flux eficient pentru participanți.</p>
+        </div>
+        <div class="card cat">
+          <h3>Nunți & Private</h3>
+          <p>Eleganță în fiecare detaliu: Chiavari, canapele, mese pentru candy bar.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA final discret -->
+    <section class="section cta">
+      <h2>Ai un eveniment în plan?</h2>
+      <p class="muted" style="margin:0 0 10px">Spune-ne data, locul și numărul de persoane — revenim rapid cu o propunere.</p>
+      <a class="btn" href="contact.html">Contactează-ne</a>
+
+    </section>
+
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> RZVevents · Cluj-Napoca · <a href="mailto:razvan@rzvevents.ro" style="color:inherit">razvan@rzvevents.ro</a>
+  </footer>
+
+  <!-- WhatsApp FAB (text) -->
+  <a id="waFab" class="wa-fab" target="_blank" rel="noopener" aria-label="Scrie pe WhatsApp">WhatsApp</a>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Setări contact
+    const PHONE_E164 = '40756503604'; // << pune aici numărul tău (fără +)
+    const waMsg = 'Bună! Aș dori informații despre mobilier pentru evenimente.';
+
+    // Link WhatsApp FAB
+    const waLink = `https://wa.me/${PHONE_E164}?text=${encodeURIComponent(waMsg)}`;
+    document.getElementById('waFab').href = waLink;
+
+    // Hamburger
+    const toggleBtn = document.querySelector('.nav-toggle');
+    const nav = document.getElementById('site-nav');
+    toggleBtn.addEventListener('click', ()=>{
+      const open = nav.classList.toggle('open');
+      toggleBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      toggleBtn.setAttribute('aria-label', open ? 'Închide meniul' : 'Deschide meniul');
+    });
+    // închide meniul după click pe link (mobil)
+    nav.querySelectorAll('a').forEach(a=>{
+      a.addEventListener('click', ()=>{
+        if(nav.classList.contains('open')){
+          nav.classList.remove('open');
+          toggleBtn.setAttribute('aria-expanded','false');
+          toggleBtn.setAttribute('aria-label','Deschide meniul');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

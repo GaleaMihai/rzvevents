@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <!-- SEO -->
+  <title>RZVevents — Închirieri mobilier pentru evenimente în Cluj</title>
+  <meta name="description" content="Închiriem mese, scaune, canapele și veselă pentru evenimente în Cluj & împrejurimi. Montaj și transport gratuit în zonă.">
+  <link rel="canonical" href="https://rzvevents.ro/">
+  <meta name="robots" content="index,follow">
+  <meta name="theme-color" content="#0f172a">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="RZVevents">
+  <meta property="og:title" content="RZVevents — Închirieri mobilier pentru evenimente în Cluj">
+  <meta property="og:description" content="Mese, scaune, canapele și veselă. Montaj & transport gratuit în Cluj.">
+  <meta property="og:url" content="https://rzvevents.ro/">
+  <meta property="og:image" content="images/og-cover.jpg">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="RZVevents — Închirieri mobilier pentru evenimente în Cluj">
+  <meta name="twitter:description" content="Mese, scaune, canapele și veselă. Montaj & transport gratuit în Cluj.">
+  <meta name="twitter:image" content="images/og-cover.jpg">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik+Wet+Paint&family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --bg1:#0b0f1a; --bg2:#0f172a;
+      --ink:#e7eefb; --muted:#9aa6c5;
+      --btn:#d4af37; --btnHover:#c39a2f; /* Auriul tău */
+      --ring:rgba(255,255,255,.12);
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter,system-ui,Segoe UI,Roboto,Arial,sans-serif;
+      color:var(--ink); background:linear-gradient(180deg,var(--bg1) 0%,var(--bg2) 100%);
+    }
+
+    /* HEADER (sticky + hamburger) */
+    .site-header{
+      position:sticky; top:0; z-index:50; backdrop-filter:blur(8px);
+      background:linear-gradient(180deg,rgba(11,15,26,.9),rgba(15,23,42,.7));
+      border-bottom:1px solid rgba(255,255,255,.06);
+    }
+    .site-header__inner{
+      max-width:1100px; margin:0 auto; padding:10px 16px;
+      display:flex; align-items:center; justify-content:space-between; gap:12px;
+    }
+    .brand{ font-family:"Rubik Wet Paint", cursive; color:#ecf2ff; text-decoration:none; font-size:26px; }
+    .nav{ display:flex; gap:16px; }
+    .nav a{ color:#e7eefb; text-decoration:none; font-weight:700; padding:8px 10px; border-radius:10px; }
+    .nav a:hover{ background:rgba(255,255,255,.06); }
+
+    .hamburger{
+      display:none; width:42px; height:42px; border-radius:10px;
+      border:1px solid rgba(255,255,255,.12); background:transparent; cursor:pointer;
+    }
+    .hamburger span{ display:block; width:22px; height:2px; background:#e7eefb; margin:5px auto; transition:.2s; }
+
+    @media (max-width:820px){
+      .hamburger{ display:block; }
+      .nav{
+        position:fixed; inset:56px 0 auto 0; background:rgba(11,15,26,.98);
+        border-bottom:1px solid rgba(255,255,255,.06);
+        display:none; flex-direction:column; padding:12px 16px;
+      }
+      .nav.open{ display:flex; }
+    }
+
+    /* HERO */
+    .hero{
+      min-height:calc(100vh - 64px);
+      display:flex; flex-direction:column; align-items:center; justify-content:center;
+      text-align:center; padding:32px 16px; gap:18px;
+    }
+    h1{
+      font-family:"Rubik Wet Paint", cursive;
+      font-size:clamp(48px, 14vw, 120px);
+      line-height:1; margin:0;
+      color:#ecf2ff; max-width:95vw; word-break:break-word;
+      text-shadow:0 3px 0 #111827, 0 6px 18px #000, 0 0 36px #60a5fa55, 0 0 80px #3b82f655;
+    }
+    .slogan{
+      font-size:clamp(16px,3.5vw,26px);
+      font-weight:600; color:var(--muted); margin:0;
+      max-width:800px;
+    }
+
+    /* FOOTER minimalist */
+    footer{ border-top:1px solid rgba(255,255,255,.06); padding:18px 16px; text-align:center; color:var(--muted); }
+
+    /* WhatsApp FAB pe culorile brandului */
+    .wa-fab{
+      position:fixed; right:18px; bottom:18px; z-index:60;
+      background:var(--btn); color:#111; font-weight:900; text-decoration:none;
+      padding:12px 16px; border-radius:999px; border:1px solid rgba(0,0,0,.08);
+      box-shadow:0 10px 24px rgba(0,0,0,.35);
+    }
+    .wa-fab:hover{ background:var(--btnHover); transform:translateY(-1px); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="site-header__inner">
+      <a href="index.html" class="brand">RZVevents</a>
+
+      <button class="hamburger" aria-label="Deschide meniul" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+
+      <nav class="nav" role="navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="products.html">Products</a>
+        <a href="evenimente.html">Evenimente</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- HERO (fără cele 4 butoane) -->
+  <main class="hero">
+    <h1>RZVevents</h1>
+    <p class="slogan">Transformăm orice spațiu într-o experiență memorabilă.</p>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    © <span id="year"></span> RZVevents · Cluj-Napoca ·
+    <a href="mailto:razvan@rzvevents.ro" style="color:inherit">razvan@rzvevents.ro</a>
+  </footer>
+
+  <!-- WhatsApp FAB (auriu) -->
+  <a href="https://wa.me/40712345678?text=Bună!%20Am%20o%20întrebare%20despre%20produsele%20RZVevents."
+     class="wa-fab" target="_blank" rel="noopener" aria-label="Scrie pe WhatsApp">WhatsApp</a>
+
+  <script>
+    // Burger menu
+    const burger = document.querySelector('.hamburger');
+    const nav = document.querySelector('.nav');
+    if(burger && nav){
+      burger.addEventListener('click', ()=>{
+        const open = nav.classList.toggle('open');
+        burger.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nav.classList.remove('open')));
+    }
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
