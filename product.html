@@ -289,7 +289,7 @@
         el.category.textContent = (item.category_label || item.category || '');
 
         // Price + stock + attrs
-        el.price.textContent = `${item.price_per_day} RON / zi`;
+        el.price.textContent = `${item.price_per_day} EUR /zi + TVA`;
         el.stock.textContent = item.total_stock ?? '—';
         el.dim.textContent = fmtDim(item.dimensions);
         el.mat.textContent = item.material || '—';
