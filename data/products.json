@@ -74,7 +74,7 @@
       "category": "vesela",
       "category_label": "Veselă",
       "name": "Farfurii (per bucată)",
-      "price_per_day": 2,
+      "price_per_day": 100,
       "total_stock": 1000,
       "images": ["images/farfurie1.jpg", "images/farfurie2.jpg"],
       "description": "Farfurii albe, aspect curat în poze; stoc mare pentru evenimente ample.",
